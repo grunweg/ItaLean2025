@@ -118,54 +118,77 @@
             background-color: rgba(187, 46, 41, 0.12);
         }
 
+        .sponsor-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
         .sponsor-card {
+            position: relative;
             display: block;
+            width: 100%;
             text-decoration: none;
             color: inherit;
-            border-radius: 0.75rem;
+            border-radius: 1rem;
             border: 1px solid rgba(0, 0, 0, 0.08);
-            padding: 2rem 1.5rem;
-            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1.05rem 1.1rem;
+            background-color: rgba(255, 255, 255, 0.97);
             transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .sponsor-card:hover,
         .sponsor-card:focus-visible {
             transform: translateY(-2px);
-            background-color: rgba(187, 46, 41, 0.08);
-            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
-            border-color: rgba(187, 46, 41, 0.35);
         }
 
         .sponsor-card:focus-visible {
             outline: none;
-            box-shadow: 0 0 0 0.25rem rgba(187, 46, 41, 0.25);
         }
 
         .sponsor-card:active {
             transform: translateY(0);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.14);
-            background-color: rgba(187, 46, 41, 0.12);
         }
 
         .sponsor-card.platinum {
-            border-color: rgba(180, 180, 180, 0.7);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(235, 239, 245, 0.95));
+            border: 2px solid rgba(184, 188, 196, 0.9);
+            background: linear-gradient(140deg, rgba(249, 250, 252, 0.98), rgba(224, 224, 226, 0.98));
+            box-shadow: 0 1.5rem 2.5rem -1.5rem rgba(109, 113, 121, 0.45);
+        }
+
+        .sponsor-card.platinum:hover,
+        .sponsor-card.platinum:focus-visible {
+            border-color: rgba(164, 168, 176, 0.95);
+            box-shadow: 0 0 0 0.28rem rgba(184, 188, 196, 0.22), 0 1.75rem 2.8rem -1.35rem rgba(109, 113, 121, 0.52);
+            background: linear-gradient(140deg, rgba(253, 253, 254, 0.98), rgba(214, 214, 216, 0.98));
         }
 
         .sponsor-card.gold {
-            border-color: rgba(212, 175, 55, 0.6);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 243, 205, 0.95));
+            border: 2px solid rgba(212, 175, 55, 0.55);
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.97), rgba(255, 243, 205, 0.97));
+            box-shadow: 0 1.25rem 2.25rem -1.35rem rgba(212, 175, 55, 0.55);
+        }
+
+        .sponsor-card.gold:hover,
+        .sponsor-card.gold:focus-visible {
+            border-color: rgba(212, 175, 55, 0.75);
+            box-shadow: 0 0 0 0.28rem rgba(212, 175, 55, 0.18), 0 1.5rem 2.5rem -1.3rem rgba(212, 175, 55, 0.65);
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.97), rgba(255, 236, 196, 0.97));
         }
 
         .sponsor-badge {
             font-weight: 600;
             letter-spacing: 0.02em;
+            font-size: 0.98rem;
+            padding: 0.52rem 1.05rem;
         }
 
         .sponsor-badge-platinum {
             color: #495057;
-            background-color: rgba(180, 180, 180, 0.25);
+            background-color: rgba(184, 188, 196, 0.28);
         }
 
         .sponsor-badge-gold {
@@ -175,17 +198,95 @@
 
         .sponsor-logo {
             display: block;
-            margin: 1.25rem auto 1rem;
-            max-width: 70%;
-            max-height: 90px;
+            margin: 0.65rem auto 0.35rem;
+            max-width: 100%;
+            max-height: 190px;
             object-fit: contain;
             filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.1));
         }
 
+        .sponsor-card p {
+            font-size: 1.4rem;
+            line-height: 1.45;
+        }
+
+        .presenter-inline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0rem;
+            margin: 0.75rem auto 0;
+            padding: 0.65rem 1.15rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(12, 12, 12, 0.1);
+            box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(6px);
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
+        }
+
+        .presenter-inline:hover,
+        .presenter-inline:focus-visible {
+            border-color: rgba(5, 68, 155, 0.28);
+            box-shadow: 0 18px 36px -18px rgba(5, 68, 155, 0.55);
+            transform: translateY(-1px);
+        }
+
+        .presenter-inline:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 0.3rem rgba(5, 68, 155, 0.18), 0 18px 36px -18px rgba(5, 68, 155, 0.55);
+        }
+
+        .presenter-inline-text {
+            font-size: 1.3rem;
+            letter-spacing: 0.04em;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .presenter-inline-logo {
+            height: 80px;
+            width: auto;
+            max-width: 220px;
+        }
+
         @media (max-width: 575.98px) {
+            .sponsor-stack {
+                gap: 1.25rem;
+                max-width: 100%;
+            }
+
+            .sponsor-card {
+                padding: 0.95rem 1rem;
+            }
+
+            .sponsor-badge {
+                font-size: 0.9rem;
+                padding: 0.45rem 0.9rem;
+            }
+
             .sponsor-logo {
-                max-width: 80%;
-                max-height: 72px;
+                max-width: 100%;
+                max-height: 155px;
+                margin: 0.55rem auto 0.3rem;
+            }
+
+            .sponsor-card p {
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .presenter-inline {
+                flex-direction: column;
+                gap: 0.4rem;
+                padding: 0.6rem 0.9rem;
+            }
+
+            .presenter-inline-logo {
+                height: 50px;
+                max-width: 210px;
             }
         }
 
@@ -235,6 +336,7 @@
 <!--                    <li class="nav-item"><a class="nav-link" href="#fees">Fees</a></li>-->
 <!--                    <li class="nav-item"><a class="nav-link" href="#accommodation">Accommodation</a></li>-->
                     <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
 <!--                    <li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>-->
 <!--                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>-->
@@ -256,6 +358,11 @@
                         <span class="mx-2" aria-hidden="true">|</span>
                         <span>December 9-12, 2025</span>
                     </p>
+                    <a href="https://harmonic.fun" class="presenter-inline" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Harmonic, presenting partner for ItaLean 2025">
+                        <span class="presenter-inline-text">Presented by</span>
+                        <img src="images/Harmonic_logo.png" class="presenter-inline-logo" alt="Harmonic logo">
+                    </a>
                 </div>
             </div>
         </div>
@@ -354,7 +461,7 @@
             <!-- Speakers Section -->
             <div class="row mb-5">
                 <div class="col-12">
-                    <h2 id="speakers" class="section-title mb-4">Confirmed speakers</h2>
+                    <h2 id="speakers" class="section-title mb-4">Speakers</h2>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <a href="https://webusers.imj-prg.fr/~riccardo.brasca/" class="card shadow-sm h-100 speaker-card text-reset" target="_blank" rel="noopener noreferrer">
@@ -384,7 +491,7 @@
                             <a href="https://mathematics.stanford.edu/people/jared-duker-lichtman" class="card shadow-sm h-100 speaker-card text-reset" target="_blank" rel="noopener noreferrer">
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-2">Jared Duker Lichtman</h6>
-                                    <p class="card-text text-muted">Math Inc. / Morph Labs</p>
+                                    <p class="card-text text-muted">Stanford, Math Inc.</p>
                                 </div>
                             </a>
                         </div>
@@ -408,7 +515,7 @@
                             <a href="https://perso.univ-st-etienne.fr/nf51454h/" class="card shadow-sm h-100 speaker-card text-reset" target="_blank" rel="noopener noreferrer">
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-2">Filippo Nuccio</h6>
-                                    <p class="card-text text-muted">Université Jean Monnet</p>
+                                    <p class="card-text text-muted">Inria, Université Jean Monnet</p>
                                 </div>
                             </a>
                         </div>
@@ -424,7 +531,7 @@
                             <a href="https://people.epfl.ch/auguste.poiroux/?lang=en" class="card shadow-sm h-100 speaker-card text-reset" target="_blank" rel="noopener noreferrer">
                                 <div class="card-body text-center">
                                     <h6 class="card-title mb-2">Auguste Poiroux</h6>
-                                    <p class="card-text text-muted">Math Inc. / Morph Labs</p>
+                                    <p class="card-text text-muted">Math Inc.</p>
                                 </div>
                             </a>
                         </div>
@@ -488,6 +595,18 @@
                 </div>
             </div>
 
+                <!-- Schedule Section -->
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 id="schedule" class="section-title mb-4">Schedule</h2>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <p class="mb-0 text-muted">The detailed program is coming soon. Please check back for updates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <!-- Acknowledgement Section -->
             <div class="row mb-5">
                 <div class="col-12">
@@ -507,23 +626,17 @@
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <p class="mb-4 text-center">We gratefully acknowledge the generous support of our sponsors.</p>
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="https://harmonic.fun" class="sponsor-card platinum text-center text-reset" target="_blank" rel="noopener noreferrer">
-                                        <span class="badge rounded-pill sponsor-badge sponsor-badge-platinum">Platinum Sponsor</span>
-                                        <img src="images/Harmonic_logo_small.png" class="sponsor-logo img-fluid" alt="Harmonic logo">
-                                        <h5 class="mt-3 mb-1">Harmonic</h5>
-                                        <p class="text-muted small mb-0">Accelerating formal mathematics through human-centered AI tooling.</p>
-                                    </a>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <a href="https://www.gresearch.com" class="sponsor-card gold text-center text-reset" target="_blank" rel="noopener noreferrer">
-                                        <span class="badge rounded-pill sponsor-badge sponsor-badge-gold">Gold Sponsor</span>
-                                        <img src="images/GResearch_logo_small.png" class="sponsor-logo img-fluid" alt="G-Research logo">
-                                        <h5 class="mt-3 mb-1">G-Research</h5>
-                                        <p class="text-muted small mb-0">Advancing machine learning and quantitative research for the global community.</p>
-                                    </a>
-                                </div>
+                            <div class="sponsor-stack">
+                                <a href="https://harmonic.fun" class="sponsor-card platinum text-center text-reset" target="_blank" rel="noopener noreferrer">
+                                    <span class="badge rounded-pill sponsor-badge sponsor-badge-platinum">Platinum Sponsor</span>
+                                    <img src="images/Harmonic_logo.png" class="sponsor-logo img-fluid" alt="Harmonic logo">
+                                    <p class="text-muted small mb-0 mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                </a>
+                                <a href="https://www.gresearch.com" class="sponsor-card gold text-center text-reset" target="_blank" rel="noopener noreferrer">
+                                    <span class="badge rounded-pill sponsor-badge sponsor-badge-gold">Gold Sponsor</span>
+                                    <img src="images/GResearch_logo.png" class="sponsor-logo img-fluid" alt="G-Research logo">
+                                    <p class="text-muted small mb-0 mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </a>
                             </div>
                             <p class="mb-0 text-center mt-4">Interested organizations can contact us at <a href="mailto:italean2025@gmail.com">italean2025@gmail.com</a>.</p>
                         </div>
