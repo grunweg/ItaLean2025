@@ -31,3 +31,13 @@ This section will list all the projects started or advanced during the conferenc
 ## Resources
 
 For further learning resources, including tutorials, books, exercises, and tools, please see the official [Lean learning page](https://lean-lang.org/learn/).
+
+## Sponsors
+
+[![Harmonic](images/Harmonic_readme.png)](https://harmonic.fun/)
+
+[![G-Research](images/GResearch_readme.png)](https://www.gresearch.com/)
+
+## Institutional Support
+
+![University of Bologna](images/UniBo_DipMath_readme.png)
